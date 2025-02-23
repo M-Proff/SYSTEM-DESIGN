@@ -1,0 +1,27 @@
+Key OOP Concepts Used
+1. Encapsulation
+Each class has its own private data members and provides public methods to interact with them.
+
+2. Abstraction
+The user interacts with high-level methods like parkVehicle() and removeVehicle() without worrying about internal details.
+3. Modularity
+The program is divided into multiple classes (Vehicle, ParkingSpot, ParkingLot), making it easier to maintain and extend.
+4. Polymorphism (Basic)
+Although not fully used, the structure allows easy extension for features like ElectricVehicle with charging spots.
+Sample Output (Example Run)
+yaml
+Copy
+Edit
+Available Spots -> Bike: 2, Car: 2, Truck: 1
+Vehicle B123 parked at Spot 1
+Vehicle C456 parked at Spot 3
+Vehicle T789 parked at Spot 5
+Vehicle C999 parked at Spot 4
+Available Spots -> Bike: 1, Car: 0, Truck: 0
+Spot 2 is now free.
+Available Spots -> Bike: 2, Car: 0, Truck: 0
+Possible Enhancements
+✅ Add Ticketing System (Entry and Exit Time Tracking)
+✅ Use Maps for Faster Spot Retrieval
+✅ Add Multi-level Parking Feature
+
