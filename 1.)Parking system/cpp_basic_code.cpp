@@ -19,7 +19,7 @@ public:
 class ParkingSpot {
 private:
     int spotID;
-    string spotType;
+    string spotType; 
     bool isOccupied;
     Vehicle* assignedVehicle;
 
