@@ -109,7 +109,7 @@ int main() {
     lot.displayAvailableSpots();
 
     // Park vehicles
-    lot.parkVehicle(&bike1);
+    lot.parkVehicle(&bike1);  // difference between call by refernece and and without refernce
     lot.parkVehicle(&car1);
     lot.parkVehicle(&truck1);
     lot.parkVehicle(&car2);
@@ -125,3 +125,84 @@ int main() {
 
     return 0;
 }
+//minimum to make it work in interview
+
+// #include <bits/stdc++.h>
+
+// using namespace std;
+
+// class Vehicle {
+// private:
+//     string plate;
+//     string type;
+
+// public:
+//     Vehicle(string vehicle_plate, string vehicle_type) : plate(vehicle_plate), type(vehicle_type) {}
+
+//     string display_plate() {
+//         return plate;
+//     }
+//     string display_type() {
+//         return type;
+//     }
+// };
+
+// class ParkingSpot {
+// private:
+//     int park_number;
+//     string park_type;
+//     bool is_occupied;
+//     Vehicle* veh_assigned;
+
+// public:
+//     ParkingSpot(int number, string type) : park_number(number), park_type(type), is_occupied(false), veh_assigned(NULL) {}
+
+//     bool is_empty() {
+//         return !is_occupied;
+//     }
+
+//     bool assign_vehicle(Vehicle* vehicle) {
+//         if (is_occupied) return false;
+//         is_occupied = true;
+//         veh_assigned = vehicle;
+//         return true;
+//     }
+
+//     string spot_type() {
+//         return park_type;
+//     }
+// };
+
+// class ParkingLot {
+// private:
+//     vector<ParkingSpot> spots;
+//     int type_1, type_2;
+
+// public:
+//     ParkingLot(int cars, int bikes) : type_1(cars), type_2(bikes) {
+//         int id = 1;
+//         for (int i = 0; i < type_1; i++) spots.push_back(ParkingSpot(id++, "car"));
+//         for (int i = 0; i < type_2; i++) spots.push_back(ParkingSpot(id++, "bike"));
+//     }
+
+//     void park_vehicle(Vehicle* vehicle) {
+//         for (auto& spot : spots) { // Use reference to modify original object
+//             if (spot.spot_type() == vehicle->display_type() && spot.is_empty()) {
+//                 if (spot.assign_vehicle(vehicle)) {
+//                     cout << "Vehicle with plate " << vehicle->display_plate() << " parked in a " << vehicle->display_type() << " spot.\n";
+//                     return;
+//                 }
+//             }
+//         }
+//         cout << "No available spot for " << vehicle->display_type() << "\n";
+//     }
+// };
+
+// int main() {
+//     Vehicle bike_1("A123", "bike");
+//     ParkingLot lot(0, 1);
+
+//     lot.park_vehicle(&bike_1);
+//     return 0;
+// }
+
